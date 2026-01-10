@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@theme {
+  --font-sans: 'Outfit', 'sans-serif';
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+:root {
+  --p: 153 47% 49%;
+  --pc: 153 100% 10%;
+}
