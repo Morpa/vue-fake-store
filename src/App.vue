@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import TheNavbar from './components/TheNavbar.vue'
+import { Toaster } from 'vue-sonner'
+import 'vue-sonner/style.css'
 </script>
 
 <template>
   <div class="min-h-dvh bg-base-200/30 font-sans text-base-content antialiased">
-    <!-- <TheNavbar /> -->
+    <TheNavbar />
     <RouterView v-slot="{ Component }">
       <Transition name="fade" mode="out-in">
         <component :is="Component" />
@@ -19,7 +22,7 @@ import { RouterView } from 'vue-router'
         <p>Copyright &copy; 2026 - Todos os direitos reservados</p>
       </aside>
     </footer>
-    <!-- <Toaster /> -->
+    <Toaster rich-colors />
   </div>
 </template>
 
